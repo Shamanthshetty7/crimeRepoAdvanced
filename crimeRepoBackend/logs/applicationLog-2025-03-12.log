@@ -1,0 +1,882 @@
+2025-03-12 10:17:55 [WARN] c.z.h.p.HikariPool [HikariPool-121 housekeeper] HikariPool-121 - Thread starvation or clock leap detected (housekeeper delta=11h22m46s26ms611µs).
+2025-03-12 10:28:45 [INFO] o.a.c.c.C.[.[.[/] [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-12 10:28:45 [INFO] o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-03-12 10:28:45 [INFO] o.s.w.s.DispatcherServlet [http-nio-8080-exec-2] Completed initialization in 79 ms
+2025-03-12 10:28:45 [DEBUG] c.e.C.c.CommentsController [http-nio-8080-exec-1] CommentsController::getAllCommentsByReportId() passed id: 4 
+2025-03-12 10:28:45 [ERROR] o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+io.jsonwebtoken.security.SignatureException: JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+	at io.jsonwebtoken.impl.DefaultJwtParser.verifySignature(DefaultJwtParser.java:340)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:579)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:364)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:94)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:36)
+	at io.jsonwebtoken.impl.io.AbstractParser.parse(AbstractParser.java:29)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseSignedClaims(DefaultJwtParser.java:830)
+	at com.endava.CrimeReportingSystem.service.impl.JwtServiceImpl.extractAllClaims(JwtServiceImpl.java:81)
+	at com.endava.CrimeReportingSystem.service.impl.JwtServiceImpl.extractClaim(JwtServiceImpl.java:72)
+	at com.endava.CrimeReportingSystem.service.impl.JwtServiceImpl.extractUserName(JwtServiceImpl.java:67)
+	at com.endava.CrimeReportingSystem.config.JwtFilter.doFilterInternal(JwtFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-12 10:28:46 [DEBUG] c.e.C.c.CommentsController [http-nio-8080-exec-1] CommentsController::getAllCommentsByReportId() -success 
+2025-03-12 10:28:47 [DEBUG] c.e.C.c.NewsController [http-nio-8080-exec-4] NewsController::getAllNews() - Fetching all news.
+2025-03-12 10:28:47 [DEBUG] c.e.C.c.ReportsController [http-nio-8080-exec-5] ReportsController::getAllReports() - Fetching all reports.
+2025-03-12 10:28:48 [DEBUG] c.e.C.c.NewsController [http-nio-8080-exec-4] NewsController::getAllNews() - Successfully retrieved 6 news items.
+2025-03-12 10:28:48 [DEBUG] c.e.C.c.ReportsController [http-nio-8080-exec-5] ReportsController::getAllReports() - Successfully fetched all reports.
+2025-03-12 10:28:48 [DEBUG] c.e.C.c.ExternalApiController [http-nio-8080-exec-6] ExternalApiController::getCoordinatesByAddress() - Fetching coordinates for address: [Jayanagar, Bangalore, Vijayanagar (Bangalore), Bangalore, Kadugodi, Bangalore, Indiranagar (Bangalore), Bangalore, Koramangala, Bangalore, Vasanthanagar, Bangalore, Pattanduru Agrahara, Bangalore, Prashanth Extension, Bangalore East, Prashanth Extension, Gandhipura]
+2025-03-12 10:28:57 [DEBUG] c.e.C.c.ExternalApiController [http-nio-8080-exec-6] ExternalApiController::getCoordinatesByAddress() - Successfully retrieved coordinates for address: [Jayanagar, Bangalore, Vijayanagar (Bangalore), Bangalore, Kadugodi, Bangalore, Indiranagar (Bangalore), Bangalore, Koramangala, Bangalore, Vasanthanagar, Bangalore, Pattanduru Agrahara, Bangalore, Prashanth Extension, Bangalore East, Prashanth Extension, Gandhipura]
+2025-03-12 11:04:44 [INFO] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(537)-127.0.0.1] Application shutdown requested.
+2025-03-12 11:04:44 [INFO] o.s.b.w.e.t.GracefulShutdown [RMI TCP Connection(537)-127.0.0.1] Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-12 11:04:44 [INFO] o.a.c.h.Http11NioProtocol [tomcat-shutdown] Pausing ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:04:46 [INFO] o.s.b.w.e.t.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-03-12 11:04:46 [INFO] o.a.c.h.Http11NioProtocol [RMI TCP Connection(537)-127.0.0.1] Stopping ProtocolHandler ["http-nio-8080"]
+2025-03-12 11:04:46 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean [RMI TCP Connection(537)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 11:04:46 [INFO] c.z.h.HikariDataSource [RMI TCP Connection(537)-127.0.0.1] HikariPool-121 - Shutdown initiated...
+2025-03-12 11:04:46 [INFO] c.z.h.HikariDataSource [RMI TCP Connection(537)-127.0.0.1] HikariPool-121 - Shutdown completed.
+2025-03-12 11:17:31 [DEBUG] o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [CrimeReportingSystemApplicationTests]: using SpringBootContextLoader
+2025-03-12 11:17:31 [DEBUG] o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.endava.CrimeReportingSystem.CrimeReportingSystemApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2025-03-12 11:17:31 [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.endava.CrimeReportingSystem.CrimeReportingSystemApplicationTests]: CrimeReportingSystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-12 11:17:31 [DEBUG] o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using ContextCustomizerFactory implementations for test class [CrimeReportingSystemApplicationTests]: [ImportsContextCustomizerFactory, ExcludeFilterContextCustomizerFactory, HttpGraphQlTesterContextCustomizerFactory, DuplicateJsonObjectContextCustomizerFactory, MockitoContextCustomizerFactory, TestRestTemplateContextCustomizerFactory, WebTestClientContextCustomizerFactory, DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory, OnFailureConditionReportContextCustomizerFactory, OverrideAutoConfigurationContextCustomizerFactory, ObservabilityContextCustomizerFactory, TypeExcludeFiltersContextCustomizerFactory, PropertyMappingContextCustomizerFactory, WebDriverContextCustomizerFactory, BeanOverrideContextCustomizerFactory, MockServerContainerContextCustomizerFactory, DynamicPropertiesContextCustomizerFactory]
+2025-03-12 11:17:31 [DEBUG] o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using ContextCustomizers for test class [CrimeReportingSystemApplicationTests]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, WebTestClientContextCustomizer, DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer, OnFailureConditionReportContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer, DynamicPropertiesContextCustomizer]
+2025-03-12 11:17:32 [DEBUG] o.s.c.a.ClassPathScanningCandidateComponentProvider [main] Identified candidate component class: file [C:\Users\shashetty\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\CrimeReportingSystem\target\classes\com\endava\CrimeReportingSystem\CrimeReportingSystemApplication.class]
+2025-03-12 11:17:32 [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.endava.CrimeReportingSystem.CrimeReportingSystemApplication for test class com.endava.CrimeReportingSystem.CrimeReportingSystemApplicationTests
+2025-03-12 11:17:33 [DEBUG] o.s.t.c.u.TestContextSpringFactoriesUtils [main] Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+2025-03-12 11:17:33 [DEBUG] o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners for test class [CrimeReportingSystemApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, BeanOverrideTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, CommonCachesTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, MockitoResetTestExecutionListener]
+2025-03-12 11:17:33 [DEBUG] o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener [main] Before test class: class [CrimeReportingSystemApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+2025-03-12 11:17:33 [INFO] o.s.b.d.r.RestartApplicationListener [main] Restart disabled due to context in which it is running
+2025-03-12 11:17:35 [INFO] c.e.C.CrimeReportingSystemApplicationTests [main] Starting CrimeReportingSystemApplicationTests using Java 17 with PID 35028 (started by shashetty in C:\Users\shashetty\Documents\workspace-spring-tool-suite-4-4.26.0.RELEASE\CrimeReportingSystem)
+2025-03-12 11:17:35 [DEBUG] c.e.C.CrimeReportingSystemApplicationTests [main] Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-03-12 11:17:35 [INFO] c.e.C.CrimeReportingSystemApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2025-03-12 11:17:42 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-12 11:17:44 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 1322 ms. Found 10 JPA repository interfaces.
+2025-03-12 11:17:49 [INFO] o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-12 11:17:49 [INFO] o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-03-12 11:17:50 [INFO] o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-03-12 11:17:52 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-12 11:17:53 [INFO] c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-03-12 11:17:54 [INFO] c.z.h.p.HikariPool [main] HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: f7d9c126-6616-4607-83ca-f048a7daac2b
+2025-03-12 11:17:54 [INFO] c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-03-12 11:17:55 [INFO] o.h.o.c.pooling [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-12 11:18:03 [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-12 11:18:05 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 11:18:07 [INFO] o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-12 11:18:12 [INFO] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [main] Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-03-12 11:18:12 [WARN] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer [main] Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-03-12 11:18:12 [WARN] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-12 11:18:16 [INFO] o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-03-12 11:18:19 [INFO] c.e.C.CrimeReportingSystemApplicationTests [main] Started CrimeReportingSystemApplicationTests in 46.388 seconds (process running for 53.625)
+2025-03-12 11:18:23 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:23 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:23 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 13 ms
+2025-03-12 11:18:24 [DEBUG] c.e.C.c.UsersController [main] UsersController::getUserById() - Entering method with userId: 1
+2025-03-12 11:18:24 [DEBUG] c.e.C.c.UsersController [main] UsersController::getUserById() - User not found with id: 1
+2025-03-12 11:18:24 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:24 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:24 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2025-03-12 11:18:25 [DEBUG] c.e.C.c.UsersController [main] UsersController::saveUser() - Entering method with usersDTO: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@16df87f1
+2025-03-12 11:18:25 [DEBUG] c.e.C.c.UsersController [main] UsersController::saveUser() - User added successfully: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@1190d070
+2025-03-12 11:18:25 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:25 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:25 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:25 [DEBUG] c.e.C.c.UsersController [main] UsersController::checkUserLogin() - Entering method with usersDTO: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@21360d04
+2025-03-12 11:18:25 [DEBUG] c.e.C.c.UsersController [main] UsersController::checkUserLogin() - Invalid login for user: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@21360d04
+2025-03-12 11:18:25 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:25 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:25 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:25 [DEBUG] c.e.C.c.UsersController [main] UsersController::getAllUsers() - Entering method
+2025-03-12 11:18:25 [DEBUG] c.e.C.c.UsersController [main] UsersController::getAllUsers() - Found 2 users
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::updateUser() - Entering method with usersDTO: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@3d6d1b07
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::updateUser() - User updated successfully: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@4c64e6ee
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::updateUser() - Entering method with usersDTO: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@6271cdb3
+2025-03-12 11:18:26 [ERROR] c.e.C.c.UsersController [main] UsersController::updateUser() - Failed to update user. Error message: Failed to update user
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::saveUser() - Entering method with usersDTO: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@406d9443
+2025-03-12 11:18:26 [ERROR] c.e.C.c.UsersController [main] UsersController::saveUser() - Failed to add user. Error message: Failed to save user
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::deleteUser() - Entering method with userId: 1
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::deleteUser() - User not found with id: 1
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::checkUserLogin() - Entering method with usersDTO: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@7a5c6d8
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::checkUserLogin() - User login successful for: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@7a5c6d8
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::getAllUsers() - Entering method
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::getAllUsers() - Users not available
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::deleteUser() - Entering method with userId: 1
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::deleteUser() - Successfully deleted user with id: 1
+2025-03-12 11:18:26 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:26 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::getUserById() - Entering method with userId: 1
+2025-03-12 11:18:26 [DEBUG] c.e.C.c.UsersController [main] UsersController::getUserById() - Found user: com.endava.CrimeReportingSystem.entity.dto.UsersDTO@241f4260
+2025-03-12 11:18:27 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:27 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::deleteUser() - Entering method with userProfileId: 1
+2025-03-12 11:18:27 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::deleteUser() - Successfully deleted user profile with userProfileId: 1
+2025-03-12 11:18:27 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:27 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfile() - Entering method with userProfileDTO: UserProfileDTO(profileId=1, userId=1, userName=Shamanth, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:27 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfile() - Successfully saved user profile: UserProfileDTO(profileId=1, userId=1, userName=Shamanth, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:27 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:27 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::updateUserProfile() - Entering method with userProfileDTO: UserProfileDTO(profileId=0, userId=1, userName=Shamanth, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:27 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::updateUserProfile() - Successfully updated user profile: UserProfileDTO(profileId=0, userId=1, userName=Shamanth, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:27 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:27 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:27 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::updateUserProfile() - Entering method with userProfileDTO: UserProfileDTO(profileId=0, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:27 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::updateUserProfile() - Failed to update user profile. Error message: UserProfile not found
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfileImage() - Entering method with userProfileId: 1
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfileImage() - Error occurred while saving user profile image for userProfileId: 1. Error: Unexpected error
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfile() - Entering method with userProfileDTO: UserProfileDTO(profileId=0, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfile() - Failed to save user profile. Error message: Failed to save user profile
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileKycStatusByUserId() - Entering method with userId: 1
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileKycStatusByUserId() - Successfully retrieved KYC status for userId: 1
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::updateUserProfile() - Entering method with userProfileDTO: UserProfileDTO(profileId=0, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::updateUserProfile() - Error occurred while updating user profile. Error: Unexpected error
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::deleteUser() - Entering method with userProfileId: 1
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::deleteUser() - Error occurred while deleting user profile with userProfileId: 1. Error: Unexpected error
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileById() - Entering method with userProfileId: 999
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileById() - No user profile found for id: 999
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::deleteUser() - Entering method with userProfileId: 999
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::deleteUser() - Failed to delete user profile with userProfileId: 999
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileKycStatusByUserId() - Entering method with userId: 1
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileKycStatusByUserId() - Error occurred while fetching KYC status for userId: 1. Error: Service error
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileByUserId() - Entering method with userId: 1
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileByUserId() - Successfully retrieved user profile: UserProfileDTO(profileId=0, userId=1, userName=Shamanth, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileByUserId() - Entering method with userId: 999
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileByUserId() - No user profile found for userId: 999
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfile() - Entering method with userProfileDTO: UserProfileDTO(profileId=0, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfile() - Error occurred while saving user profile. Error: Unexpected error
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileById() - Entering method with userProfileId: 1
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileById() - Successfully retrieved user profile: UserProfileDTO(profileId=0, userId=1, userName=Shamanth, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null)
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileByUserId() - Entering method with userId: 1
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileByUserId() - Error occurred while fetching user profile for userId: 1. Error: Unexpected error
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileById() - Entering method with userProfileId: 1
+2025-03-12 11:18:28 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileById() - Error occurred while fetching user profile with id: 1. Error: Database error
+2025-03-12 11:18:28 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:28 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfileImage() - Entering method with userProfileId: 1
+2025-03-12 11:18:28 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfileImage() - Successfully saved user profile image for userProfileId: 1
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfileImage() - Entering method with userProfileId: 999
+2025-03-12 11:18:29 [ERROR] c.e.C.c.UserProfileController [main] UserProfileController::saveUserProfileImage() - Failed to save user profile image. Error message: UserProfile not found
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileKycStatusByUserId() - Entering method with userId: 999
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.UserProfileController [main] UserProfileController::getUserProfileKycStatusByUserId() - No KYC status found for userId: 999
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getInvestigationCentreById() - Fetching investigation centre for city: New York
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getInvestigationCentreById() - Successfully retrieved data for city: New York
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getNearbyEmergencyServices() - Fetching nearby emergency services for coordinates: lat=40.7128, lon=-74.006
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getNearbyEmergencyServices() - No nearby emergency services found for coordinates: lat=40.7128, lon=-74.006
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::checkVerifiedEmail() - Verifying email: test@example.com
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::checkVerifiedEmail() - Successfully verified email: test@example.com
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getNearbyEmergencyServices() - Fetching nearby emergency services for coordinates: lat=40.7128, lon=-74.006
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getNearbyEmergencyServices() - Successfully retrieved nearby services for coordinates: lat=40.7128, lon=-74.006
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getCoordinatesByAddress() - Fetching coordinates for address: [Address1, Address2]
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getCoordinatesByAddress() - Successfully retrieved coordinates for address: [Address1, Address2]
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::checkVerifiedEmail() - Verifying email: test@example.com
+2025-03-12 11:18:29 [ERROR] c.e.C.c.ExternalApiController [main] ExternalApiController::checkVerifiedEmail() - Error occurred while verifying email: test@example.com. Error: {}
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getCoordinatesByAddress() - Fetching coordinates for address: [Address1, Address2]
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getCoordinatesByAddress() - No coordinates found for address: [Address1, Address2]
+2025-03-12 11:18:29 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:29 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getInvestigationCentreById() - Fetching investigation centre for city: Unknown City
+2025-03-12 11:18:29 [DEBUG] c.e.C.c.ExternalApiController [main] ExternalApiController::getInvestigationCentreById() - No data found for city: Unknown City
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 4 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::saveComment() - Entering method with commentsDTO: com.endava.CrimeReportingSystem.entity.dto.CommentsDTO@5676891b
+2025-03-12 11:18:30 [ERROR] c.e.C.c.CommentsController [main] CommentsController::saveComment() - Failed to save comment. Error message: Failed to save comment 
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::getAllCommentsByReportId() passed id: 1 
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::getAllCommentsByReportId() -success 
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::getAllCommentsByReportId() passed id: 1 
+2025-03-12 11:18:30 [ERROR] c.e.C.c.CommentsController [main] CommentsController::getAllCommentsByReportId() - Error occurred while fetching comments for reportId: 1. Error: Unexpected Error
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::deleteComment() - Request to delete comment with id: 1
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::deleteComment() - Comment deleted successfully with id: 1
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::deleteComment() - Request to delete comment with id: 1
+2025-03-12 11:18:30 [ERROR] c.e.C.c.CommentsController [main] CommentsController::deleteComment() - Comment not found with id: 1
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::getAllCommentsByReportId() passed id: 1 
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::getAllCommentsByReportId() - Comments not available 
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 4 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::deleteComment() - Request to delete comment with id: 1
+2025-03-12 11:18:30 [ERROR] c.e.C.c.CommentsController [main] CommentsController::deleteComment() - Error occurred while deleting comment with id: 1. Error: Unexpected Error
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::saveComment() - Entering method with commentsDTO: com.endava.CrimeReportingSystem.entity.dto.CommentsDTO@43c7d3b9
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::saveComment() - Comment added successfully: com.endava.CrimeReportingSystem.entity.dto.CommentsDTO@fef4e6b 
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.CommentsController [main] CommentsController::saveComment() - Entering method with commentsDTO: com.endava.CrimeReportingSystem.entity.dto.CommentsDTO@6d609b6f
+2025-03-12 11:18:30 [ERROR] c.e.C.c.CommentsController [main] CommentsController::saveComment() - Error occurred while saving comment. Error: Unexpected Error
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 3 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllDataCount() - Entering method to fetch all data counts
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllDataCount() - Successfully retrieved dashboard data: {blockedUser=2, activeUsers=10}
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllDataCount() - Entering method to fetch all data counts
+2025-03-12 11:18:30 [ERROR] c.e.C.c.DashboardController [main] DashboardController::getAllDataCount() - Error occurred while fetching dashboard data. Error: Unexpected Error
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllReportByMonth() - Entering method to fetch reports by month for year: 2023
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllReportByMonth() - Successfully retrieved report counts for year 2023: {JANUARY=5, FEBRUARY=10}
+2025-03-12 11:18:30 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:30 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:30 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllReportByMonth() - Entering method to fetch reports by month for year: 2023
+2025-03-12 11:18:30 [ERROR] c.e.C.c.DashboardController [main] DashboardController::getAllReportByMonth() - Error occurred while fetching report data for year 2023. Error: Unexpected Error
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllDataCount() - Entering method to fetch all data counts
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllDataCount() - No data found for dashboard
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllReportByMonth() - Entering method to fetch reports by month for year: 2023
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.DashboardController [main] DashboardController::getAllReportByMonth() - No report data found for year: 2023
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::addEmergencyNumber() - Entering method to add emergency number
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::addEmergencyNumber() - Failed to add emergency number
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::deleteEmergencyNumber() - Entering method to delete emergency number with ID: 1
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::deleteEmergencyNumber() - Successfully deleted emergency number with ID: 1
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::deleteEmergencyNumber() - Entering method to delete emergency number with ID: 1
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::deleteEmergencyNumber() - Failed to delete emergency number with ID: 1
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::fetchAllEmergencyNumbers() - Entering method to fetch all emergency numbers
+2025-03-12 11:18:31 [ERROR] c.e.C.c.EmergencyController [main] EmergencyController::fetchAllEmergencyNumbers() - Error occurred while fetching emergency numbers. Error: Unexpected Error
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::fetchAllEmergencyNumbers() - Entering method to fetch all emergency numbers
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::fetchAllEmergencyNumbers() - Successfully retrieved emergency numbers: [EmergencyDTO[emergencyId=0, emergencyContactType=, emergencyContactNumber=, createdAt=null, updatedAt=null, user=null], EmergencyDTO[emergencyId=0, emergencyContactType=, emergencyContactNumber=, createdAt=null, updatedAt=null, user=null]]
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::updateEmergencyNumber() - Entering method to update emergency number
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::updateEmergencyNumber() - Successfully updated emergency number: EmergencyDTO[emergencyId=0, emergencyContactType=, emergencyContactNumber=, createdAt=null, updatedAt=null, user=null]
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::deleteEmergencyNumber() - Entering method to delete emergency number with ID: 1
+2025-03-12 11:18:31 [ERROR] c.e.C.c.EmergencyController [main] EmergencyController::deleteEmergencyNumber() - Error occurred while deleting emergency number with ID: 1. Error: Unexpected Error
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::updateEmergencyNumber() - Entering method to update emergency number
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::updateEmergencyNumber() - Failed to update emergency number
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::fetchAllEmergencyNumbers() - Entering method to fetch all emergency numbers
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::fetchAllEmergencyNumbers() - No emergency numbers found
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::addEmergencyNumber() - Entering method to add emergency number
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::addEmergencyNumber() - Successfully added emergency number: EmergencyDTO[emergencyId=0, emergencyContactType=, emergencyContactNumber=, createdAt=null, updatedAt=null, user=null]
+2025-03-12 11:18:31 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:31 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:31 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::addEmergencyNumber() - Entering method to add emergency number
+2025-03-12 11:18:31 [ERROR] c.e.C.c.EmergencyController [main] EmergencyController::addEmergencyNumber() - Error occurred while adding emergency number. Error: Unexpected Error
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.EmergencyController [main] EmergencyController::updateEmergencyNumber() - Entering method to update emergency number
+2025-03-12 11:18:32 [ERROR] c.e.C.c.EmergencyController [main] EmergencyController::updateEmergencyNumber() - Error occurred while updating emergency number. Error: Unexpected Error
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getReportVoteStatusByUserIdAndReportId() - Fetching vote status for userId: 999 and reportId: 999
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getReportVoteStatusByUserIdAndReportId() - No vote status found for userId: 999 and reportId: 999
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::updateReportVote() - Updating vote status for reportVoteId: 1 with voteStatus: up
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::updateReportVote() - Successfully updated vote status for reportVoteId: 1
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getReportVoteStatusByUserIdAndReportId() - Fetching vote status for userId: 1 and reportId: 1
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getReportVoteStatusByUserIdAndReportId() - Found vote status for userId: 1 and reportId: 1
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getAllReports() - Fetching all report votes.
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getAllReports() - No report votes available.
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::updateReportVote() - Updating vote status for reportVoteId: 1 with voteStatus: up
+2025-03-12 11:18:32 [ERROR] c.e.C.c.ReportVoteController [main] ReportVoteController::updateReportVote() - Error occurred while updating vote status for reportVoteId: 1. Error: Unexpected error
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getAllReports() - Fetching all report votes.
+2025-03-12 11:18:32 [ERROR] c.e.C.c.ReportVoteController [main] ReportVoteController::getAllReports() - Error occurred while fetching all report votes. Error: Unexpected error
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getReportVoteStatusByUserIdAndReportId() - Fetching vote status for userId: 1 and reportId: 1
+2025-03-12 11:18:32 [ERROR] c.e.C.c.ReportVoteController [main] ReportVoteController::getReportVoteStatusByUserIdAndReportId() - Error occurred while fetching vote status for userId: 1 and reportId: 1. Error: Unexpected error
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getAllReports() - Fetching all report votes.
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.ReportVoteController [main] ReportVoteController::getAllReports() - Successfully fetched all report votes.
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplicationImages() - Saving KYC images for applicationId: 1
+2025-03-12 11:18:32 [ERROR] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplicationImages() - Error occurred while saving KYC images for applicationId: 1. Error: Error
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getKycApplicationByProfileId() - Fetching KYC application for profileId: 1001
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getKycApplicationByProfileId() - Successfully retrieved KYC application for profileId: 1001
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::updateKycStatus() - Updating KYC status for KYC application ID: 1
+2025-03-12 11:18:32 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::updateKycStatus() - Successfully updated KYC status for KYC application ID: 1
+2025-03-12 11:18:32 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:32 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplication() - Saving new KYC application: KycApplicationDTO(KycId=1, userFullName=null, userDOB=null, userVerificationImage=null, userAdhaarFile=null, createdAt=null, updatedAt=null, currentCity=null, fecthedUserLocation=null, kycVerificationStatus=underVerification, userId=0, userProfile=UserProfileDTO(profileId=1001, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null))
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplication() - Successfully saved KYC application: KycApplicationDTO(KycId=1, userFullName=null, userDOB=null, userVerificationImage=null, userAdhaarFile=null, createdAt=null, updatedAt=null, currentCity=null, fecthedUserLocation=null, kycVerificationStatus=underVerification, userId=0, userProfile=UserProfileDTO(profileId=1001, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null))
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::updateKycStatus() - Updating KYC status for KYC application ID: 1
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::updateKycStatus() - Failed to update KYC status for KYC application ID: 1
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getKycApplicationByProfileId() - Fetching KYC application for profileId: 1001
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getKycApplicationByProfileId() - No KYC application found for profileId: 1001
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getAllKycApplications() - Fetching all KYC applications.
+2025-03-12 11:18:33 [ERROR] c.e.C.c.KycApplicationController [main] KycApplicationController::getAllKycApplications() - Error occurred while fetching all KYC applications. Error: Error
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getKycApplicationByProfileId() - Fetching KYC application for profileId: 1001
+2025-03-12 11:18:33 [ERROR] c.e.C.c.KycApplicationController [main] KycApplicationController::getKycApplicationByProfileId() - Error occurred while fetching KYC application for profileId: 1001. Error: Error
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplication() - Saving new KYC application: KycApplicationDTO(KycId=1, userFullName=null, userDOB=null, userVerificationImage=null, userAdhaarFile=null, createdAt=null, updatedAt=null, currentCity=null, fecthedUserLocation=null, kycVerificationStatus=underVerification, userId=0, userProfile=UserProfileDTO(profileId=1001, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null))
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplication() - Failed to save KYC application: Failed
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getAllKycApplications() - Fetching all KYC applications.
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getAllKycApplications() - No KYC applications found.
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getAllKycApplications() - Fetching all KYC applications.
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::getAllKycApplications() - Successfully retrieved 1 KYC applications.
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::updateKycStatus() - Updating KYC status for KYC application ID: 1
+2025-03-12 11:18:33 [ERROR] c.e.C.c.KycApplicationController [main] KycApplicationController::updateKycStatus() - Error occurred while updating KYC status for KYC application ID: 1. Error: Error
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplicationImages() - Saving KYC images for applicationId: 1
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplicationImages() - Successfully saved KYC images for applicationId: 1
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplication() - Saving new KYC application: KycApplicationDTO(KycId=1, userFullName=null, userDOB=null, userVerificationImage=null, userAdhaarFile=null, createdAt=null, updatedAt=null, currentCity=null, fecthedUserLocation=null, kycVerificationStatus=underVerification, userId=0, userProfile=UserProfileDTO(profileId=1001, userId=0, userName=null, userAddress=null, userProfileImage=null, userAlternativeNumber=null, userAge=0, userGender=null, createdAt=null, updatedAt=null, user=null))
+2025-03-12 11:18:33 [ERROR] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplication() - Error occurred while saving KYC application. Error: Error
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplicationImages() - Saving KYC images for applicationId: 1
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.KycApplicationController [main] KycApplicationController::saveKycApplicationImages() - Failed to save KYC images for applicationId: 1
+2025-03-12 11:18:33 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:33 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReport() - Updating report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:33 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReport() - Failed to update report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::deleteReport() - Deleting report with reportId: 1
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::deleteReport() - Successfully deleted report with reportId: 1
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReportImage() - Saving image for reportId: 1
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReportImage() - Failed to save image for reportId: 1
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReport() - Saving report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReport() - Successfully saved report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReportImage() - Saving image for reportId: 1
+2025-03-12 11:18:34 [ERROR] c.e.C.c.ReportsController [main] ReportsController::saveReportImage() - Error occurred while saving image for reportId: 1. Error: Unexpected error
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 2 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::deleteReport() - Deleting report with reportId: 1
+2025-03-12 11:18:34 [ERROR] c.e.C.c.ReportsController [main] ReportsController::deleteReport() - Error occurred while deleting report with reportId: 1. Error: Unexpected error
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReport() - Saving report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [ERROR] c.e.C.c.ReportsController [main] ReportsController::saveReport() - Error occurred while saving report. Error: Unexpected error
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReport() - Saving report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReport() - Failed to save report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReportVote() - Updating vote for reportId: 1
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReportVote() - Successfully updated vote for reportId: 1
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReport() - Updating report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [ERROR] c.e.C.c.ReportsController [main] ReportsController::updateReport() - Error occurred while updating report. Error: Unexpected error
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getReportById() - Fetching report with ID: 1
+2025-03-12 11:18:34 [ERROR] c.e.C.c.ReportsController [main] ReportsController::getReportById() - Error occurred while fetching report with ID: 1. Error: Unexpected error
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::deleteReport() - Deleting report with reportId: 999
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::deleteReport() - Failed to delete report with reportId: 999
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReportVote() - Updating vote for reportId: 1
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReportVote() - Failed to update vote for reportId: 1
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getAllReports() - Fetching all reports.
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getAllReports() - No reports available.
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getReportById() - Fetching report with ID: 1
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getReportById() - Successfully fetched report with ID: 1
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReportVote() - Updating vote for reportId: 1
+2025-03-12 11:18:34 [ERROR] c.e.C.c.ReportsController [main] ReportsController::updateReportVote() - Error occurred while updating vote for reportId: 1. Error: Unexpected error
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 1 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getAllReports() - Fetching all reports.
+2025-03-12 11:18:34 [ERROR] c.e.C.c.ReportsController [main] ReportsController::getAllReports() - Error occurred while fetching all reports. Error: Unexpected error
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReport() - Updating report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::updateReport() - Successfully updated report: ReportsDTO(reportId=1, reportTitle=Test Report, reportDescription=null, reportUpvoteCount=0, reportDownvoteCount=0, voteStatus=null, reportLocation=New York, createdAt=null, reportImage=null, detailedInformation=null, isActive=null, reportStatus=null, user=null)
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getReportById() - Fetching report with ID: 999
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getReportById() - No report found with ID: 999
+2025-03-12 11:18:34 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:34 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReportImage() - Saving image for reportId: 1
+2025-03-12 11:18:34 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::saveReportImage() - Successfully saved image for reportId: 1
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getAllReports() - Fetching all reports.
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.ReportsController [main] ReportsController::getAllReports() - Successfully fetched all reports.
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 5 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.InvestigationCentreController [main] InvestigationCentreController::getInvestigationCentreById() - Fetching investigation centre details for code: INV123
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.InvestigationCentreController [main] InvestigationCentreController::getInvestigationCentreById() - Successfully retrieved data for investigation centre code: INV123
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.InvestigationCentreController [main] InvestigationCentreController::getInvestigationCentreById() - Fetching investigation centre details for code: INV123
+2025-03-12 11:18:35 [ERROR] c.e.C.c.InvestigationCentreController [main] InvestigationCentreController::getInvestigationCentreById() - Error occurred while fetching investigation centre data for code: INV123. Error: Service exception
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.InvestigationCentreController [main] InvestigationCentreController::getInvestigationCentreById() - Fetching investigation centre details for code: INV999
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.InvestigationCentreController [main] InvestigationCentreController::getInvestigationCentreById() - No data found for investigation centre code: INV999
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::saveUserNotifications() - Saving notification for userType: Admin
+2025-03-12 11:18:35 [ERROR] c.e.C.c.NotificationsController [main] NotificationsController::saveUserNotifications() - Error occurred while saving notification for userType: Admin. Error: Unexpected error
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::getReportById() - Fetching notifications for userId: 1
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::getReportById() - Successfully fetched notifications for userId: 1
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::saveUserNotifications() - Saving notification for userType: Admin
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::saveUserNotifications() - Failed to save notification for userType: Admin
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::getReportById() - Fetching notifications for userId: 1
+2025-03-12 11:18:35 [ERROR] c.e.C.c.NotificationsController [main] NotificationsController::getReportById() - Error occurred while fetching notifications for userId: 1. Error: Unexpected error
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::updateReport() - Updating notification status for notificationId: 1
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::updateReport() - Successfully updated notification status for notificationId: 1
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::clearNotificationsByUserId() - Clearing notifications for userId: 1
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::clearNotificationsByUserId() - Successfully cleared notifications for userId: 1
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::updateReport() - Updating notification status for notificationId: 1
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::updateReport() - Failed to update notification status for notificationId: 1
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::clearNotificationsByUserId() - Clearing notifications for userId: 1
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::clearNotificationsByUserId() - No notifications found for userId: 1
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:35 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:35 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::updateReport() - Updating notification status for notificationId: 1
+2025-03-12 11:18:35 [ERROR] c.e.C.c.NotificationsController [main] NotificationsController::updateReport() - Error occurred while updating notification status for notificationId: 1. Error: Unexpected error
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::clearNotificationsByUserId() - Clearing notifications for userId: 1
+2025-03-12 11:18:36 [ERROR] c.e.C.c.NotificationsController [main] NotificationsController::clearNotificationsByUserId() - Error occurred while clearing notifications for userId: 1. Error: Unexpected error
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::getReportById() - Fetching notifications for userId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::getReportById() - No notifications found for userId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::saveUserNotifications() - Saving notification for userType: Admin
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NotificationsController [main] NotificationsController::saveUserNotifications() - Notification successfully saved for userType: Admin
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::deleteNews() - Deleting news for newsId: 1
+2025-03-12 11:18:36 [ERROR] c.e.C.c.NewsController [main] NewsController::deleteNews() - Error occurred while deleting news for newsId: 1. Error: Unexpected error
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNewsImage() - Saving news image for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNewsImage() - Successfully saved news image for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNews() - Saving new news: com.endava.CrimeReportingSystem.entity.dto.NewsDTO@1832e266
+2025-03-12 11:18:36 [ERROR] c.e.C.c.NewsController [main] NewsController::saveNews() - Error occurred while saving news. Error: Unexpected error
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNewsImage() - Saving news image for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNewsImage() - Failed to save news image for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getAllNews() - Fetching all news.
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getAllNews() - No news found.
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNewsImage() - Saving news image for newsId: 1
+2025-03-12 11:18:36 [ERROR] c.e.C.c.NewsController [main] NewsController::saveNewsImage() - Error occurred while saving news image for newsId: 1. Error: Unexpected error
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::deleteNews() - Deleting news for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::deleteNews() - Successfully deleted news for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::updateNews() - Updating news for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::updateNews() - Successfully updated news for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNews() - Saving new news: com.endava.CrimeReportingSystem.entity.dto.NewsDTO@5ccbca8
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNews() - Successfully saved news: com.endava.CrimeReportingSystem.entity.dto.NewsDTO@3238c895
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getAllNews() - Fetching all news.
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getAllNews() - Successfully retrieved 1 news items.
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::deleteNews() - Deleting news for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::deleteNews() - Failed to delete news for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getNewsById() - Fetching news for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getNewsById() - Successfully retrieved news for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::updateNews() - Updating news for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::updateNews() - Failed to update news for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getNewsById() - Fetching news for newsId: 1
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::getNewsById() - No news found for newsId: 1
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNews() - Saving new news: com.endava.CrimeReportingSystem.entity.dto.NewsDTO@640e861
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::saveNews() - Failed to save news: Failed to save news
+2025-03-12 11:18:36 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:36 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:36 [DEBUG] c.e.C.c.NewsController [main] NewsController::updateNews() - Updating news for newsId: 1
+2025-03-12 11:18:36 [ERROR] c.e.C.c.NewsController [main] NewsController::updateNews() - Error occurred while updating news for newsId: 1. Error: Unexpected error
+2025-03-12 11:18:37 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:37 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:37 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:37 [DEBUG] c.e.C.c.NewsController [main] NewsController::getNewsById() - Fetching news for newsId: 1
+2025-03-12 11:18:37 [ERROR] c.e.C.c.NewsController [main] NewsController::getNewsById() - Error occurred while fetching news for newsId: 1. Error: Unexpected error
+2025-03-12 11:18:37 [INFO] o.s.m.w.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2025-03-12 11:18:37 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Initializing Servlet ''
+2025-03-12 11:18:37 [INFO] o.s.t.w.s.TestDispatcherServlet [main] Completed initialization in 0 ms
+2025-03-12 11:18:37 [DEBUG] c.e.C.c.NewsController [main] NewsController::getAllNews() - Fetching all news.
+2025-03-12 11:18:37 [ERROR] c.e.C.c.NewsController [main] NewsController::getAllNews() - Error occurred while fetching all news. Error: Unexpected error
+2025-03-12 11:18:48 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-12 11:18:48 [INFO] c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-03-12 11:18:48 [INFO] c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

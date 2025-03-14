@@ -1,0 +1,42 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2C3E50;
+  
+    .error-message {
+      text-align: center;
+      color:white;
+      max-width: 500px;
+      border: 2px solid #00b300;
+      padding: 40px;
+      border-radius: 10px;
+      background-color: #333;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  
+      .error-code {
+        font-size: 100px;
+        font-weight: bold;
+        color: #00b300;
+      }
+  
+      .error-description {
+        color: #ccc;
+        font-size: 20px;
+      }
+  
+      .back-button {
+        color: #fff;
+        background-color: #00b300;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+  
+        &:hover {
+          background-color: #009900;
+        }
+      }
+    }
+  }
+  

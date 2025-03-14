@@ -1,0 +1,80 @@
+$fontFamily: 'Courier New', Courier, monospace;
+$nav-background:#2C3E50;
+*{
+    font-family: $fontFamily;
+    
+}
+.navbar {
+  font-family:'Roboto', sans-serif !important;
+  height: 100px;
+    background: $nav-background;
+    .crime-text {
+      color: #E74C3C; 
+   
+    font-size: 24px;
+    font-weight: bold;
+      }
+
+     label{
+      float:left;
+      margin: 0.3rem;
+     }
+      .repo-text {
+        color: white; 
+        font-family: 'Roboto', sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        
+      }
+
+      .user-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .dropdown-menu {
+          background-color: white; 
+          border: 1px solid #F1C40F; 
+          
+          .dropdown-item {
+            color: black; 
+
+            a{
+              text-decoration: none;
+              color:black;
+            }
+            a:hover{
+              color:white;
+            }
+           
+        }
+        
+        .dropdown-item:hover {
+            background-color: #E74C3C; 
+            color: #FFFFFF; 
+        }
+        
+      }
+      
+      
+
+        .user-icon {
+          font-size: 2.5rem !important;
+        color: #F1C40F !important; 
+       }
+       .username-text {
+        color: White; 
+        font-weight: bold;
+      }
+      
+      
+     
+    }
+
+   .color{
+        background-color: #006666 !important;
+    
+    } 
+    
+   
+}
+

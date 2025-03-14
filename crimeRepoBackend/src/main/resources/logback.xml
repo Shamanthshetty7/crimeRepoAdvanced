@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration >
+
+   
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+           
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level] %c{1} [%t] %m%n</pattern>
+        </encoder>
+    </appender>
+
+   
+    <appender name="DAILY_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/applicationLog.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Roll the log file every day -->
+            <fileNamePattern>logs/applicationLog-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>  <!-- Keep logs for 30 days -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%level] %c{1} [%t] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root Logger Configuration: Logs everything at DEBUG level and above -->
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="DAILY_FILE" />
+    </root>
+
+   
+
+</configuration>

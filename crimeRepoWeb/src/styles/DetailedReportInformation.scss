@@ -1,0 +1,40 @@
+
+$primary-color: #007bff;
+$secondary-color: #28a745;
+$danger-color: #dc3545;
+$badge-font-size: 1.1rem;
+
+.report-image {
+  max-height: 180px;
+  min-height: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.report-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.report-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.status-badge {
+  font-size: $badge-font-size;
+  height: 2rem;
+  border-radius: 15px;
+  
+  
+}
+
+.comments{
+  max-height: 40rem; 
+  overflow: auto;
+}
+
+
+
+
+
+
